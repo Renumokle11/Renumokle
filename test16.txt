@@ -1,0 +1,5 @@
+Mary had a little lamb.
+Its fleece was white as snow.
+It was also tasty.
+I'm going to write these to the file.
+and finally, we close it.

@@ -1,0 +1,107 @@
+class Calculator:
+
+    def add(args):
+        print("the addition of n numbers:",args)
+        lis = [int(i) for i in args]
+        return sum(lis)
+    
+    def sub(*args):
+
+        print("the subtraction of n numbers:",args)
+        lis= args[0] if len (args)>0 else 0
+        for num in args[1:]:
+            lis -=num
+            return lis
+        
+    def mul(*args):
+        print("the multiplication of n numbers:",args)
+        result =1
+        lis = [int(i) for i in args]
+        for num in args:
+            result*=num
+            return (lis)
+
+    def div(*args):
+        print("the division of n numbers:",args)
+        result = args[0]
+        for num in args [1:]:
+            if num !=0:
+                return  num / num
+            else:
+                return "can not divide by zero"
+        
+    def square(num):
+        print("the square of num:",num)
+        return(num**2)
+ 
+
+    def square_root(num):
+        print("the square_root of num:",num)
+        if num>=0:
+            return num ** 0.5
+        else:
+            return"can not calculate square root"   
+        
+        
+        
+cal= Calculator()  
+while True:
+    print("CALCULATOR")
+    print("1. add")
+    print("2. sub")
+    print("3. mul")
+    print("4. div")
+    print("5. square")
+    print("6. square_root")
+    print("7.Exit")
+
+    choice=input("Enter your choice (1/2/3/4/5/6/7): ")
+
+    if choice == '7':
+         break
+
+    if choice in ('1','2','3','4'):
+        
+        
+        if choice == '1':
+            a = input("Enter the numbers seprated by space to add:")
+            li = a.strip().split(" ")
+            print(Calculator.add(li))
+
+        elif choice == '2':
+            a = input("Enter the numbers seprated by space to sub:")
+            li = a.strip().split(" ")
+            print(Calculator.sub(li))
+
+        elif choice == '3':
+            a = input("Enter the numbers seprated by space to mul:")
+            li = a.strip().split(" ")
+            print(Calculator.mul(li))
+            
+    
+        elif choice == '4':
+           a = input("Enter the numbers seprated by space to div :")
+           li = a.strip().split(" ")
+           print(Calculator.div(li))
+              
+
+    elif choice == '5':
+        a= input("Enter the numbers seprated by space to square :")
+        li = a.strip().split(" ")
+        print(Calculator.square(li))
+
+    elif choice == '6':
+        a= input("Enter the numbers seprated by space to square_root :")
+        li = a.strip().split(" ")
+        print(Calculator.square_root(li))
+        
+           
+    else:
+        print("Invalid choice")
+
+        
+        
+        
+       
+        
+        

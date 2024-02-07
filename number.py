@@ -1,0 +1,13 @@
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> print ("I will now count my chickens:")
+... 
+... print ("Hens", 25 + 30 / 6)
+... print ("Roosters", 100 - 25 * 3 % 4)
+... 
+... print ("Now I will count the eggs:")
+... 
+... print (3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6)
+... print ("Is it true that 3 + 2 < 5 - 7?")
+... 
+... print (3 + 2 < 5 - 7)
