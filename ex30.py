@@ -1,6 +1,8 @@
 people = 30
 cars = 40
 trucks = 15
+bikes = 50 
+
 if cars > people:
     print("We should take the cars.")
 
@@ -20,3 +22,8 @@ if people > trucks:
     print("Alright, let's just take the trucks.")
 else:
    print("Fine, let's stay home then.")
+
+if bikes<cars:
+    print("peoples take bikes.")   
+else:
+    print("peoples take cars")     
