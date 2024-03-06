@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    
+    <style>
+        body {
+            text-align: center; /* Center align the content */
+        }
+        .border {
+            border: 1px solid black; /* Example border styling */
+            display: inline-block; /* Make the container inline-block to center it */
+            padding: 20px; /* Add padding for better visual */
+        }
+        .header {
+            text-align: center; /* Center align the header */
+        }
+        form {
+            text-align: center; /* Align form elements to the left within the container */
+        }
+        label
+        {width: 150px;
+        display: inline-block;
+    text-align: right;}
+    input[type="text"]
+    {width: 200px;}
+
+
+    .btn {
+                background-color: rgb(17, 0, 255); /* Change button background color to blue */
+                color: white; /* Change button text color to white */
+                border: none; /* Remove button border */
+                padding: 10px 20px; /* Add padding to button */
+                text-align: center; /* Center align button text */
+                text-decoration: none; /* Remove underline from button text */
+                display: inline-block;
+            }
+            .btn:hover {
+                background-color: navy; /* Change button background color on hover */
+            }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div align="center">
+        <div class="border">
+             <div class="header">
+    <h1>Employee Details</h1>
+
+    
+       <form action="{{ url_for('employee_details') }}" method="post">
+                        <p>{{error}}</p>
+            <label for="emp_id">Employee ID:</label>
+            <input type="text" id="emp_id" name="emp_id" required><br><br>
+            
+            <label for="emp_name">Employee Name:</label>
+            <input type="text" id="emp_name" name="emp_name" required><br><br>
+        
+            <label for="company_name">Company Name:</label>
+            <input type="text" id="company_name" name="company_name" required><br><br>
+            
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" required><br><br>
+            
+            <label for="date_of_joining">Date of Joining:</label>
+            <input type="text" id="date_of_joining"name="date_of_joining" placeholder="YYYY/MM/DD" required><br><br>
+            
+            <input type="submit"class="btn" value="Submit">
+        </form>
+        </div>
+   </div>
+</body>
+</html>

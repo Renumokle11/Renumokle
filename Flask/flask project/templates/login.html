@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            text-align: center; 
+        }
+        .border {
+            border: 1px solid black; /* Example border styling */
+            display: inline-block; /* Make the container inline-block to center it */
+            padding: 40px; /* Add padding for better visual */
+        }
+        .header {
+            text-align: center; /* Center align the header */
+        }
+        form {
+            text-align: center; /* Align form elements to the left within the container */
+        }
+        label {
+            width: 150px;
+            display: inline-block;
+            text-align: right;
+        }
+        input[type="text"], input[type="password"] 
+        {
+            width: 200px;
+            margin-bottom: 10px; /* Add margin between input fields */
+            font-size: 16px;
+        }
+        .btn {
+            background-color: rgb(17, 0, 255); /* Change button background color to blue */
+            color: white; /* Change button text color to white */
+            border: none; /* Remove button border */
+            padding: 10px 20px; /* Add padding to button */
+            text-align: center; /* Center align button text */
+            text-decoration: none; /* Remove underline from button text */
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: navy; /* Change button background color on hover */
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <br><br><br><br><br><br>
+    <div align="center">
+        <div align="center" class="border">
+            <div class="header">
+                <h1 class="word">Login</h1>
+            </div><br><br><br>
+            <form action="{{ url_for('login') }}" method="POST">
+                
+                <div class="msg">{{ msg }}</div>
+                <label for="username">Username:</label>
+                <input id="username" name="username" type="text"size="15" maxlength="15"  class="textbox" required/><br><br>
+                <label for="password">password:</label>
+                <input id="password" name="password" type="password"  size="15" maxlength="15"  class="textbox" required/><br><br>
+                <input type="submit" class="btn" value="Sign In"><br><br>
+        
+        
+            </form>
+            <p class="bottom">Don't have an account? <a class="bottom" href="{{url_for('register')}}">Sign Up here</a></p>
+        </div>
+    </div>
+</body>
+</html>

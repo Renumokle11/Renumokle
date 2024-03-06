@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div align="center">
+        <div class="border">
+             <div class="header">
+                
+    <h1>Welcome to Profile Page</h1>
+    <p>Session Data:</p>
+    <pre>{{ Session }}</pre>
+    <p>Hello, {{ username }}</p>
+
+    <h2>Register Details:</h2>
+    <p>Username: {{ username }}</p>
+    <p>Password: **</p>
+    <p>Phone Number: {{ phonenumber }}</p>
+    <p>email:{{email}}</p>
+
+    <h2>Address Details:</h2>
+    <p>Street:       {{ street }}</p>
+    <p>Society Name: {{ society }}</p>
+    <p>Landmark:    {{ landmark }}</p>
+    <p>City:         {{ city }}</p>
+    <p>State:        {{ state }}</p>
+    <p>Pincode:      {{ pincode }}</p>
+
+    <h2>Employee Details:</h2>
+    <p>Employee ID:   {{ emp_id }}</p>
+    <p>Employee Name: {{ emp_name }}</p>
+    <p>Company Name:  {{ company_name }}</p>
+    <p>Designation:   {{ designation }}</p>
+    <p>Date of Joining:{{ date_of_joining }}</p>
+    
+    <h2>KYC Details:</h2>
+    <p>Aadharcard Number: {{ aadharcard_number }}</p>
+    <p>Pancard Number: {{ pancard_number }}</p>
+    
+        <h2>Thank you for filling the form!</h2>
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </div>
+    </div>
+</body>
+
+</html>
