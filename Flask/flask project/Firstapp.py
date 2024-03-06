@@ -69,11 +69,11 @@ def login():
                 session[det] = user_details[det]
             session['loggedin'] = True
 
-            if 'aadharcard_number' not in session or 'pancard_number' not in session:
+            if 'aadharcard_number' not in user_details or 'pancard_number' not in user_details:
                 return redirect(url_for('kyc_details'))
-            elif 'emp_id' not in session or 'emp_name' not in session or 'company_name' not in session or 'designation' not in session or 'date_of_joining' not in session:
+            elif 'emp_id' not in user_details or 'emp_name' not in user_details or 'company_name' not in user_details or 'designation' not in user_details or 'date_of_joining' not in user_details:
                 return redirect(url_for('employee_details'))
-            elif 'street' not in session or 'society' not in session or 'landmark' not in session or 'city' not in session or 'state' not in session or 'pincode' not in session:
+            elif 'street' not in user_details or 'society' not in user_details or 'landmark' not in user_details or 'city' not in user_details or 'state' not in user_details or 'pincode' not in user_details:
                 return redirect(url_for('address_details'))
             else:
                 return redirect(url_for('profile', msg='Logged in successfully!'))
@@ -321,6 +321,23 @@ def address_details():
 def profile():
     if 'loggedin' in session:
         username = session.get('username')
+        password = session.get('password')
+        email = session.get('email')
+        phonenumber = session.get('phonenumber')
+        Name=session.get('Name')
+        street = session.get('street')
+        society = session.get('society')
+        landmark =session.get ('landmark')
+        city=session.get ('city')
+        state= session.get('state')
+        pincode=session.get('pincode')
+        emp_id = session.get('emp_id')
+        emp_name = session.get('emp_name')
+        company_name = session.get('company_name')
+        designation = session.get('desiganation')
+        date_of_joining = session.get('date_of_joining')
+        aadharcard_number = session.get('aadharcard_number')
+        pancard_number= session.get('pancard_number')
         
         conn = get_connection()
         cursor = conn.cursor()
